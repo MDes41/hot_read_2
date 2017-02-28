@@ -4,13 +4,13 @@ class ReadsController < ApplicationController
   end
 
   def create
-    read = Read.find_or_create_by(url: url_params[:url])
-    read.count += 1
-    read.save
+    json = JSON.parse(url_params[:link])
+    read = Read.find_or_create_by(url: json['url'])
+    HandleRead.add_or_subtract(json, read)
   end
 
   private
-  def url_params
-    params.permit(:url)
-  end
+    def url_params
+      params.permit(:link)
+    end
 end
