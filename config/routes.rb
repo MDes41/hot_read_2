@@ -3,4 +3,10 @@ Rails.application.routes.draw do
 
   resources :reads, only: [:index, :create]
 
+   namespace :api do
+    namespace :v1 do
+      resources :reads, only: [:index]
+    end
+  end
+
 end

@@ -1,24 +1,25 @@
-# README
+Hotreads
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hotreads is a small application that hits https://nameless-coast-56698.herokuapp.com/reads endpoint to pull the top ten most read links.
 
-Things you may want to cover:
+Getting Started
 
-* Ruby version
+Clone the repository:
+git clone https://github.com/MDes41/hot_reads
+Bundle application
+  bundle install
+Create and migrate database
+  rake db:create db:migrate
+Deployment
 
-* System dependencies
+Production: https://nameless-coast-56698.herokuapp.com/reads
+Technology
 
-* Configuration
+The application is currently using the following technlogies:
 
-* Database creation
+Server: Ruby On Rails 5.0.1
+Database: PostgreSQL
+Libraries: JQuery, Axios
+Authors
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Matt DeMarteau
