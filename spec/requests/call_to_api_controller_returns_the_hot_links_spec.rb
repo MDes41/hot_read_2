@@ -3,7 +3,7 @@ require 'rails_helper'
 
 describe 'Hot Reads' do
   context 'When request is made to api/v1/reads' do
-    it 'returns all items' do
+    it 'returns all reads hot' do
 
       expect(Read.count).to be(0)
 
